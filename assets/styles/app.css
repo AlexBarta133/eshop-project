@@ -1,3 +1,227 @@
-body {
-    background-color: skyblue;
-}
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+    :root {
+        --primary-color: rgb(255, 255, 255); 
+    }
+    header {
+        background-color: var(--primary-color);
+        
+        margin: 0;
+    }
+    header a {
+        padding: 15px;
+        display: block;
+    }
+    html, body {  
+        margin: 0;
+        height: 100%;
+        font-family: 'Sour Gummy';
+        background: linear-gradient(to bottom, #ffffff, #6a90d3);
+        
+    }
+    .h1-video-container {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+    } 
+    .h1-video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    video {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+    nav {
+        background-color: rgb(235, 235, 235);
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: Pacifico, sans-serif;
+        margin: 0; 
+    }
+    nav ul {
+        margin: 0 auto;
+        padding: 0; 
+        list-style: none;
+        display: flex;
+        align-items: center;
+    }
+    nav li {
+        list-style: none;
+        margin: 0 15px;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        transition:all 0.3s ease; 
+    }
+    nav ul li a:hover {
+        text-decoration: underline;
+    }
+    #cart-icon {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+        vertical-align: middle;
+    }
+    nav a {
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        font-size: 18px; 
+    }
+    nav a:hover {
+        color: rgb(229,112,98);
+    }
+    h1 {
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: rgb(0, 0, 0);
+        font-size: 2.5em;
+        z-index: 1;
+    }
+    .container {
+        padding: 20px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    .product {
+        border: 1px solid #ddd;
+        padding: 16px;
+        text-align: center;
+    }
+    .product img {
+        max-width: 100%;
+        height: auto;
+    }
+    .add-to-cart {
+        background-color: rgb(0, 0, 0);
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+    .add-to-cart:hover {
+        background-color: rgb(54, 17, 219);
+    }
+    .cart {
+        margin-top: 10px;
+        border: 1px solid #ddd;
+        padding: 15px;
+        text-align: center;
+    }
+    .cart-button {
+        background-color: black;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+    }
+    .cart-button:hover {
+        background-color: rgb(229,112,98)
+    }
+    button {
+    background-color: rgb(0, 0, 0); /* Výchozí barva */
+    color: white; /* Text bílý */
+    padding: 10px 20px; /* Polstrování */
+    border: none; /* Žádné ohraničení */
+    border-radius: 25px; /* Zaoblení tlačítka */
+    cursor: pointer; /* Ukazatel myši */
+    transition: all 0.3s ease; /* Plynulé přechody */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Jemný stín při výchozím stavu */
+    }
+
+    button:hover {
+    transform: scale(1.1); /* Zvýšení velikosti o 10 % při najetí myší */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Intenzivnější stín při hoveru */
+    color: rgb(229,112,98);
+    background-color: rgb(0, 0, 0);
+    }
+    .btn-products {
+        background-color: #000000; /* Základní barva tlačítka */
+        color: white; /* Barva textu */
+        padding: 10px 20px; /* Vnitřní okraje */
+        border: none; /* Bez okrajů */
+        border-radius: 25px; /* Zaoblené rohy */
+        cursor: pointer; /* Ukazatel myši */
+        font-size: 16px; /* Velikost textu */
+        transition: background-color 0.3s ease, transform 0.2s ease; /* Plynulé přechody */
+    }
+    
+    .btn-products:hover {
+        background-color: #000000; /* Barva při hoveru */
+        transform: scale(1.05); /* Mírné zvětšení při hoveru */
+    }
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        padding: 20px;
+    }
+    
+    .product-card {
+        border: 1px solid #ddd;
+        padding: 15px;
+        text-align: center;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+    }
+    
+    .product-image {
+        width: 100%;
+        max-height: 200px;
+        object-fit: cover;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+    
+    .product-price {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 10px 0;
+    }
+    
+    .add-to-cart-btn {
+        background-color: #000000;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+    }
+    
+    .add-to-cart-btn:hover {
+        background-color: #333;
+    }
+    #cart-img {
+        width: 40px;
+        height: auto;
+       
+        margin: 0 10px;
+        cursor: pointer;
+        position: relative;
+    }
+    
+    #cart-img:hover {
+        opacity: 0.8; 
+        transform: scale(1.1); 
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);    
+        }
+        .cart-item {
+            margin-left: auto;}
+            
+
+    
